@@ -1,0 +1,26 @@
+{
+  "id": "H2",
+  "name": "Referral/fax document extractor",
+  "problem": "Extract structured data from messy synthetic referrals and route exceptions to a human.",
+  "results": [
+    [
+      "Synthetic referrals OCR evaluated",
+      "synthetic_referrals",
+      ""
+    ],
+    [
+      "Referral-ID accuracy",
+      "referral_id_accuracy",
+      ""
+    ],
+    [
+      "Seeded identifier leaks in logs",
+      "seeded_identifier_leaks_in_logs",
+      ""
+    ]
+  ],
+  "diagram": "SyntheticReferrals --> TesseractOCR --> StructuredFields --> ConfidenceQueue --> ValueFreeAudit",
+  "limits": "Synthetic healthcare-style records only; no real PHI. Real OCR is evaluated against generated ground truth with rotation, downsampling and blur. Per-field table is evidence/field-table.md. The exception queue contains document IDs, missing field names and confidence, never patient field values. Audit logs use a value-free schema rather than attempting general PHI recognition. Zero leaks refers only to tested seeded identifiers, including a failure-path secret sentinel. System tesseract executable is required; CI installs it. This is a local queue/report demo, not a payer or clinical system.",
+  "next": "Add a human-review interface with authenticated access and a larger synthetic layout corpus.",
+  "status": "done"
+}

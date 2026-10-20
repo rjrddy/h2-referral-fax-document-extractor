@@ -1,0 +1,16 @@
+/Users/rajreddy/dev/outreach/projects/h2-referral-fax-document-extractor/.venv/bin/python -m ruff check src tests
+All checks passed!
+/Users/rajreddy/dev/outreach/projects/h2-referral-fax-document-extractor/.venv/bin/python -m ruff format --check src tests
+2 files already formatted
+/Users/rajreddy/dev/outreach/projects/h2-referral-fax-document-extractor/.venv/bin/python -m pytest -q
+..                                                                       [100%]
+2 passed in 0.92s
+/Users/rajreddy/dev/outreach/projects/h2-referral-fax-document-extractor/.venv/bin/python src/main.py > evidence/bench.json
+{
+  "synthetic_referrals": 24,
+  "referral_id_accuracy": 1.0,
+  "patient_accuracy": 1.0,
+  "specialty_accuracy": 1.0,
+  "exception_queue": 24,
+  "seeded_identifier_leaks_in_logs": 0
+}

@@ -1,0 +1,8 @@
+{
+  "synthetic_referrals": 24,
+  "referral_id_accuracy": 1.0,
+  "patient_accuracy": 1.0,
+  "specialty_accuracy": 1.0,
+  "exception_queue": 24,
+  "seeded_identifier_leaks_in_logs": 0
+}

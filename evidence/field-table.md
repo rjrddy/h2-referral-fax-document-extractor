@@ -1,0 +1,5 @@
+| Field | Exact accuracy |
+|---|---|
+| referral | 1.0 |
+| patient | 1.0 |
+| specialty | 1.0 |
