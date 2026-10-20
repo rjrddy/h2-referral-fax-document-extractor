@@ -1,0 +1,5 @@
+pytest==9.1.1
+ruff==0.17.1
+matplotlib==3.11.2
+pillow==13.0.0
+pytesseract==0.3.13
